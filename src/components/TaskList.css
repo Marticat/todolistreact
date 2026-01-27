@@ -1,0 +1,29 @@
+.task-list-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+.task-list-container input {
+    width: 70%;
+    padding: 8px;
+}
+
+.task-list-container button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.task-list-container li {
+    list-style: none;
+    margin-top: 10px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
