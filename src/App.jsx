@@ -1,14 +1,14 @@
-import TodoList from "./components/TodoList.jsx";
-import TaskList from "./components/TaskList.jsx";
+import { useState } from "react";
+import TodoList from "./components/TodoList";
+import TaskList from "./components/TaskList";
 
-import './App.css'
+import "./App.css";
+
 function App() {
-    const currentTasks = ["Testing", "SA", "Article", "Interview"]
     return (
-        <div>
-            <h1>My ToDo App</h1>
-            <TodoList tasks={currentTasks}/>
-            <TaskList tasks={currentTasks}/>
+        <div className="app-container">
+            <h1 className="app-title">My ToDo</h1>
+            <TaskList />
         </div>
     );
 }

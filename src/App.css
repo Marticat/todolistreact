@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #020617, #020617);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 20px;
+}
+
+.app-title {
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
