@@ -23,11 +23,10 @@ body {
     width: 70%;
     padding: 12px;
     border-radius: 8px;
-    border: none;
+    border: 1px solid #1e293b;
     outline: none;
     background: #020617;
     color: white;
-    border: 1px solid #1e293b;
 }
 
 .task-list-container input::placeholder {
@@ -65,22 +64,49 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.2s;
+
+    /* плавность всех изменений */
+    transition:
+            transform 0.25s ease,
+            opacity 0.25s ease,
+            background 0.25s ease,
+            border-color 0.25s ease;
+
+    /* начальные значения для появления */
+    opacity: 0;
+    transform: translateY(8px);
+    animation: fadeIn 0.25s forwards;
 }
 
-.task-list-container li:hover {
-    border-color: #3b82f6;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
+/* кнопки внутри задачи */
 .task-list-container li button {
     background: #ef4444;
     padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .task-list-container li button:hover {
     background: #dc2626;
 }
+
 .done {
     text-decoration: line-through;
     color: #64748b;
+    background: rgba(34, 197, 94, 0.1);
+    transform: scale(0.96);
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.remove {
+    opacity: 0;
+    transform: translateX(50px) scale(0.8);
+    transition: transform 0.25s ease, opacity 0.25s ease;
 }
